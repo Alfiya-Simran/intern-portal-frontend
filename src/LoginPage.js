@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css'; // Optional: Add your styling here
-
+import { Link } from "react-router-dom";
 function LoginPage() {
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ function LoginPage() {
         <input type="text" placeholder="Username" required />
         <input type="password" placeholder="Password" required />
         <button type="submit">Login</button>
-        <p>Don't have an account? Just click login, no signup needed 😉</p>
+        <p>Don’t have an account? <Link to="/signup">Sign up here</Link></p>
       </form>
     </div>
   );
