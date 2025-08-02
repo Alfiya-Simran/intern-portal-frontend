@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Navbar from './Navbar';
 const API_BASE = "https://intern-portal-backend-wuk4.onrender.com";
 
 const Leaderboard = () => {
