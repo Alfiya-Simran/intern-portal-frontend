@@ -18,6 +18,7 @@ const SignupPage = () => {
     e.preventDefault();
     console.log("Signup Data:", formData);
     navigate("/dashboard");
+    navigate('/leaderboard');
   };
 
   return (
