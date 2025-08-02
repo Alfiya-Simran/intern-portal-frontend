@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from "./Navbar";
 import LoginPage from './LoginPage';
 import Dashboard from './Dashboard';
 import SignupPage from "./SignupPage";
 import Leaderboard from "./Leaderboard";
-import Navbar from "./Navbar";
 function App() {
   return (
     <Router>
