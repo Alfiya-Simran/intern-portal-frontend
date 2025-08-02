@@ -1,6 +1,6 @@
-// src/pages/SignupPage.js
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "./Signup.css"; // New CSS file specific to Signup page
 
 const SignupPage = () => {
   const navigate = useNavigate();
@@ -17,14 +17,13 @@ const SignupPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Signup Data:", formData);
-    // In real app: send to backend here
-    navigate("/dashboard"); // After signup
+    navigate("/dashboard");
   };
 
   return (
-    <div className="container">
+    <div className="signup-container">
       <h2>Signup</h2>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "300px" }}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -36,7 +35,7 @@ const SignupPage = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Email Address"
           value={formData.email}
           onChange={handleChange}
           required
@@ -49,8 +48,11 @@ const SignupPage = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Signup</button>
+        <button type="submit">Sign Up</button>
       </form>
+      <p style={{ marginTop: "1rem" }}>
+        Already have an account? <Link to="/">Login here</Link>
+      </p>
     </div>
   );
 };
