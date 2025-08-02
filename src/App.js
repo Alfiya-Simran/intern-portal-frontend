@@ -4,6 +4,7 @@ import LoginPage from './LoginPage';
 import Dashboard from './Dashboard';
 import SignupPage from "./SignupPage";
 import Leaderboard from "./Leaderboard";
+import Navbar from "./Navbar";
 function App() {
   return (
     <Router>
