@@ -1,15 +1,16 @@
-import React from "react";
-import Dashboard from "./Dashboard";
-import Leaderboard from "./Leaderboard";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
-    <div className="container mt-4">
-      <h1 className="text-center mb-4">Intern Portal</h1>
-      <Dashboard />
-      <hr />
-      <Leaderboard />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
