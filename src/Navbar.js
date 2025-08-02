@@ -1,18 +1,26 @@
-// src/components/Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; // optional styling
+import { Link, useNavigate } from 'react-router-dom';
+import './Navbar.css'; // Optional: Your styles
 
-const Navbar = () => {
+function Navbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Optional: Clear any localStorage/sessionStorage here if used
+    navigate('/');
+  };
+
   return (
     <nav className="navbar">
-      <h3>Intern Portal</h3>
-      <div className="nav-links">
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/leaderboard">Leaderboard</Link>
-      </div>
+      <ul>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/leaderboard">Leaderboard</Link></li>
+        <li style={{ marginLeft: 'auto' }}>
+          <button onClick={handleLogout} className="logout-btn">Logout</button>
+        </li>
+      </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;
