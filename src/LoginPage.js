@@ -8,6 +8,7 @@ function LoginPage() {
   const handleLogin = (e) => {
     e.preventDefault();
     navigate('/dashboard');
+    navigate('/leaderboard');
   };
 
   return (
