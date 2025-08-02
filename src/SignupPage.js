@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Signup.css"; // New CSS file specific to Signup page
+import "./Signup.css";
 
 const SignupPage = () => {
   const navigate = useNavigate();
@@ -17,8 +17,7 @@ const SignupPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Signup Data:", formData);
-    navigate("/dashboard");
-    navigate('/leaderboard');
+    navigate("/dashboard"); // Only navigate to dashboard
   };
 
   return (
