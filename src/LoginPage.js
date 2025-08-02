@@ -1,14 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginPage.css'; // Optional: Add your styling here
+import './LoginPage.css';
 import { Link } from "react-router-dom";
+
 function LoginPage() {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
+    // Simulate login success
     navigate('/dashboard');
-    navigate('/leaderboard');
   };
 
   return (
